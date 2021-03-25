@@ -11,16 +11,18 @@
        http://www.springframework.org/schema/task
        http://www.springframework.org/schema/task/spring-task.xsd">
 
+    <!-- 어노테이션 활성화 -->
     <task:annotation-driven/>
 
-    <!-- 파일 업로더 -->
+    <!-- 파일 업로더
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
           p:maxUploadSize="104857560"
           p:maxUploadSizePerFile="2097152"
           p:uploadTempDir="file:/Users/sanggi-son/upload/tmp"
           p:maxInMemorySize="10485756"/>
+   -->
 
-    <!-- DATABASE 설정
+    <!-- DATABASE 설정, hikariCP 사용 (CP 관리)
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="poolName" value="springHikariCP" />
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>

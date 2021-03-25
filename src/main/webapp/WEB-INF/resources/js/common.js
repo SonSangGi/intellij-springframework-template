@@ -1,0 +1,1 @@
+const hello = () => console.log("반갑습니다~ 환영합니다~");
